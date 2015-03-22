@@ -2,38 +2,27 @@
 //  AppDelegate.swift
 //  PoleVault
 //
-//  Created by xlx on 15/2/1.
+//  Created by xlx on 15/3/6.
 //  Copyright (c) 2015年 xlx. All rights reserved.
 //
 
 import UIKit
-
+import GameKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate{
 
     var window: UIWindow?
-    var senceType: Int32?
+
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        WXApi.registerApp("wxeac5c9dd2a8e9411");
+        WXApi.registerApp("wxeac5c9dd2a8e9411")
         return true
     }
     func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
-        
-        return WXApi.handleOpenURL(url, delegate:self)
-        
+        return WXApi.handleOpenURL(url, delegate: self)
     }
-    
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
-        
-        var isSuc = WXApi.handleOpenURL(url, delegate: self);
-        
-        return isSuc
-    }
-    func onResp(resp: BaseResp!) {
-        if resp.isKindOfClass(SendMessageToWXResp){
-            var alert = UIAlertView(title: "温馨提示", message: "发送成功", delegate: self, cancelButtonTitle: "确定")
-            alert.show();
-        }
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        return WXApi.handleOpenURL(url, delegate: self)
     }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -56,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate{
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

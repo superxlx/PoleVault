@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PoleVault 2.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>PoleVault.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2A6D75631A7DDB39007D2D7F</key>
+		<key>2A892E8A1AA9910300A26461</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2A6D75781A7DDB39007D2D7F</key>
+		<key>2A892EA31AA9910300A26461</key>
 		<dict>
 			<key>primary</key>
 			<true/>
